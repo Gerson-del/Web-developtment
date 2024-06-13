@@ -1,0 +1,197 @@
+/* Estilos para la galería de imágenes y la opción de ver la letra de la canción */
+.gallery {
+    display: inline-block;
+    border: 1px solid rgba(194, 172, 187, 0.445);
+    margin: 5px;
+    margin-top: 5px;
+    position: relative; /* Asegura que .content sea relativo a .gallery */
+}
+
+.gallery:hover {
+    border: 1px solid rgba(241, 43, 179, 0.932);
+}
+
+.gallery img {
+    height: 170px;
+    width: 235px;
+}
+
+/* Esto modifica nuestro boton */
+.gallery button {
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.gallery a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px; /* Agregado unidades a padding */
+}
+
+.gallery .name {
+    padding: 10px 15px;
+    margin: 5px;
+    margin-top: 5px;
+    color: black;
+    font-size: 18px; 
+    font-weight: bold; 
+    text-align: center; /* Centra el texto */
+    background-color: #f9f9f9; /* Añade un fondo claro para diferenciar el nombre del fondo de la galería */
+    border-radius: 5px; 
+}
+
+.gallery .content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    z-index: 1;
+    padding: 10px; /* Mejor apariencia */
+    top: 100%; /* Posiciona el menú debajo del botón */
+    left: 0;
+}
+
+.gallery audio {
+    width: 100%;
+    margin-top: 10px;
+    outline: none; /* Remove default outline */
+    background-color: rgba(247, 178, 232, 0.767); /* Color detras del reproductor de musica */
+    padding: 6px; /* Padding around the audio player */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(230, 5, 174, 0.5); /* coloca una sombra en el reproductor de audio */
+}
+
+
+
+/* Customizing specific parts of the controls */
+.gallery audio::-webkit-media-controls-panel {
+    background-color: #f058cf; /* Color de fondo del panel de control */
+}
+
+
+.gallery audio::-webkit-media-controls-current-time-display,
+.gallery audio::-webkit-media-controls-time-remaining-display {
+    color: #ffffff; /* Color de tiempo de la cancion */
+}
+
+
+
+.gallery audio::-webkit-media-controls-volume-slider {
+    background-color: #f058cf; /* Color de fondo del colume slider */
+}
+
+
+
+
+/* Mostrar .content solo cuando el cursor esté sobre el botón o sobre el contenido */
+.gallery button:hover + .content,
+.gallery .content:hover {
+    display: block;
+}
+
+.gallery a:hover {
+    background-color: rgb(248, 211, 242);
+}
+
+/* Esto de utiliza para about */
+
+/* Ajusta el box-sizing para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Elimina el margen del cuerpo */
+body {
+    margin: 0;
+}
+
+/* Margen para el main */
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Centra el texto en los encabezados h1 */
+h1 {
+    text-align: center;
+}
+
+/* Estilos para la barra de navegación */
+.navbar ul {
+    list-style-type: none;
+    background-color: rgb(61, 61, 61);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Estilos para los enlaces dentro de la barra de navegación */
+.navbar a {
+    color: white;
+    text-decoration: none; 
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Cambia el color de fondo al pasar el mouse sobre los enlaces de navegación */
+.navbar a:hover {
+    background-color: rgb(17, 17, 17);
+}
+
+/* Alinea los elementos de la barra de navegación horizontalmente */
+.navbar li {
+    float: left;
+}
+
+/* Estilo para el aside */
+aside {
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+
+/* Estilo para el section */
+section {
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+/* Estilo para el article */
+article {
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+/* Estilo para el footer */
+footer {
+    display: block;
+    clear: both;
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Optimiza el sitio web para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    aside, section, article {
+        width: 100%; /* Ajustado a 100% para la capacidad de respuesta */
+        float: none; /* Asegura el apilamiento vertical */
+    }
+}
+
+
+
+
+
+
